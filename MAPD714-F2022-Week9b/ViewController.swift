@@ -28,6 +28,9 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         contentInset.top = 20
         collectionView!.contentInset = contentInset
         
+        let layout = collectionView!.collectionViewLayout
+        let flow = layout as! UICollectionViewFlowLayout
+        flow.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 30, right: 20)
     }
     
     func wordsInSection(section: Int) -> [String]
@@ -63,5 +66,14 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+            let words = wordsInSection(section: indexPath.section)
+            let size = ContentCell.sizeForContentString(s: words[indexPath.row], forMaxWidth: collectionView.bounds.size.width)
+            
+        return size
+    }
+    
 }
 
