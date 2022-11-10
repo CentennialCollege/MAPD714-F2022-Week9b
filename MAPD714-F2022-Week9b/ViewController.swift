@@ -31,6 +31,11 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let layout = collectionView!.collectionViewLayout
         let flow = layout as! UICollectionViewFlowLayout
         flow.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 30, right: 20)
+        
+        self.collectionView?.register(HeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HEADER")
+        
+        flow.headerReferenceSize = CGSize(width: 100, height: 25)
+        
     }
     
     func wordsInSection(section: Int) -> [String]
@@ -75,5 +80,17 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return size
     }
     
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+    {
+        if (kind == UICollectionView.elementKindSectionHeader)
+        {
+            let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HEADER", for: indexPath) as! HeaderCell // create the header cell
+            cell.maxWidth = collectionView.bounds.size.width
+            cell.text = sections[indexPath.section]["header"]
+            
+            return cell
+        }
+        abort()
+    }
 }
 
