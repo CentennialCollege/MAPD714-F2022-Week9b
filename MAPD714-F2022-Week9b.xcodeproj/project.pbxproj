@@ -14,6 +14,7 @@
 		E90BA456291C71C2002172A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90BA455291C71C2002172A4 /* Assets.xcassets */; };
 		E90BA459291C71C2002172A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90BA457291C71C2002172A4 /* LaunchScreen.storyboard */; };
 		E90BA461291C7522002172A4 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90BA460291C7522002172A4 /* ContentCell.swift */; };
+		E90BA463291C7C2D002172A4 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90BA462291C7C2D002172A4 /* HeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E90BA458291C71C2002172A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E90BA45A291C71C2002172A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E90BA460291C7522002172A4 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		E90BA462291C7C2D002172A4 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E90BA457291C71C2002172A4 /* LaunchScreen.storyboard */,
 				E90BA45A291C71C2002172A4 /* Info.plist */,
 				E90BA460291C7522002172A4 /* ContentCell.swift */,
+				E90BA462291C7C2D002172A4 /* HeaderCell.swift */,
 			);
 			path = "MAPD714-F2022-Week9b";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90BA451291C71C0002172A4 /* ViewController.swift in Sources */,
+				E90BA463291C7C2D002172A4 /* HeaderCell.swift in Sources */,
 				E90BA44D291C71C0002172A4 /* AppDelegate.swift in Sources */,
 				E90BA44F291C71C0002172A4 /* SceneDelegate.swift in Sources */,
 				E90BA461291C7522002172A4 /* ContentCell.swift in Sources */,
